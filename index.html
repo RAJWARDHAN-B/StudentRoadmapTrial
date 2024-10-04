@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Roadmap Planner</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Student Roadmap Planner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="tree-planner.html">Tree Planner</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Student Roadmap Planner</h1>
+        <p>Plan your educational journey effectively!</p>
+    </header>
+    
+    <div class="container mt-5">
+        <div id="course-form" class="mb-4 card shadow">
+            <div class="card-body">
+                <h2 class="h4">Add a Course</h2>
+                <input type="text" id="courseName" class="form-control mb-3" placeholder="Course Name" required>
+                <input type="date" id="courseDeadline" class="form-control mb-3" required>
+                <textarea id="courseDetails" class="form-control mb-3" placeholder="Course Details (Key: Value format)" rows="3"></textarea>
+                <button class="btn btn-success btn-block" onclick="addCourse()">Add Course</button>
+            </div>
+        </div>
+        
+        <h2 class="h4 mb-3">Your Roadmap</h2>
+        <ul id="roadmap" class="list-group shadow"></ul>
+
+        <div id="courseInfo" class="mt-4" style="display:none;">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title" id="infoCourseName"></h5>
+                    <p class="card-text" id="infoCourseDetails"></p>
+                    <p class="card-text"><small class="text-muted" id="infoCourseDeadline"></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-5">
+        <p class="mb-0">© 2024 Student Roadmap Planner. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
